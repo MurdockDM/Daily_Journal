@@ -18,11 +18,11 @@
             <form action="">
                 <fieldset>
                 <label for="journalDate">Date of entry</label>
-                <input type="date" name="journalDate" id="journalDate" />
+                <input type="date" name="journalDate" id="journalDate" class="inset__border" />
                 </fieldset>
                 <fieldset>
                 <label for="conceptsCovered">Concepts Covered</label>
-                <input type="text" name="conceptsCovered" id="conceptsCovered" />
+                <input type="text" name="conceptsCovered" id="conceptsCovered" class="inset__border" />
                 </fieldset>
                 <fieldset>
                 <label for="journalEntry">Journal Entry</label>
@@ -31,11 +31,12 @@
                     id="journalEntry"
                     cols="30"
                     rows="3"
+                    class="inset__border"
                 ></textarea>
                 </fieldset>
                 <fieldset>
                 <label for="moodChoice">Mood for the day</label>
-                <select name="moodChoice" id="moodChoice">
+                <select name="moodChoice" id="moodChoice" class="inset__border">
                     <option value="happy">Happy</option>
                     <option value="sad">Sad</option>
                     <option value="despair">Swimming Pool of Despair</option>
@@ -43,8 +44,11 @@
                 </fieldset>
                 <input type="submit" value="Record Journal Entry" />
             </form>
+            <article class="entryLog">
+            </article>
         </section>    
     </article>
+    <script src="/src/scripts/journal.js"></script>
   </body>
-  <script src="/scripts/journal.js"></script>
+  
 </html>

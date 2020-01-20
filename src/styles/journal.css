@@ -3,7 +3,11 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-
+body {
+    background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80);
+    background-position: center;
+    background-size: auto;
+}
 header {
     display: block;
     background-color: hsl(210, 32%, 72%);
@@ -18,6 +22,10 @@ header > h1 {
 
 }
 
+.inset__border {
+    border: inset;
+}
+
 
 
 
@@ -26,7 +34,8 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color:hsl(160, 51%, 49%);
+    background-color:hsl(160, 51%, 49%, 38%) ;
+    
 }
 
 
@@ -59,4 +68,17 @@ select:focus {
 
 textarea:focus {
     border:2px solid #000;
+}
+
+
+.font__bold {
+    font-weight: bold;
+}
+
+.large__font {
+    font-size: 2ch;
+}
+
+.offset__right {
+    margin-left: 1rem;
 }
