@@ -1,10 +1,62 @@
-fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+html {
+    background-color: hsl(212, 33%, 89%);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    display: block;
+    background-color: hsl(210, 32%, 72%);
+    text-align: center ;
+    
+}
+
+header > h1 {
+    color: hsl(170, 97%, 15%);
+    
+    font-weight: bold;
+
 }
 
 
 
 
 
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color:hsl(160, 51%, 49%);
+}
+
+
+
+
+input[type="submit"] {
+    background-color: hsl(205, 97%, 85%);
+    font-size: 16px;
+    margin: 1rem 0 0 1rem;
+    border-radius: 12px;
+    text-shadow: 1px 1px hsl(209, 23%, 60%)
+}
+
+input[type="submit"]:hover {
+    background-color: hsl(199, 84%, 55%);
+    font-size: 16px;
+    margin: 1rem 0 0 1rem;
+    border-radius: 12px;
+    text-shadow: 1px 1px hsl(209, 23%, 60%)
+}
+
+
+input[type=text]:focus, input[type=date]:focus{ 
+	border:2px solid #000; 
+}
+
+select:focus {
+    border:2px solid #000;
+}
+
+textarea:focus {
+    border:2px solid #000;
+}
