@@ -1,0 +1,21 @@
+{   "entries": [
+    {  
+        "dateEntered": "01/20/2020",
+        "concepts": "Javascript Functions",
+        "personalEntry":"So far I feel as though I have a grasp on functions based on the material we have gone over so far.",
+        "mood": "happy"   
+    },
+    {
+        "dateEntered": "01/20/2020",
+        "concepts": "methods",
+        "personalEntry":"These were really fun to work with and learn how to use to manipulate arrays that are part of Objects",
+        "mood": "happy"   
+    },
+    {
+        "dateEntered": "01/23/2020",
+        "concepts": "DOM manipulation",
+        "personalEntry":"This feels like a big step. I grasp the concepts but need more practice",
+        "mood": "happy" 
+    }
+]
+}

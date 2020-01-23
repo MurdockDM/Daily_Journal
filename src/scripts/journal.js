@@ -1,26 +1,5 @@
 
 
-const journalEntries = [
-    {
-        dateEntered: "01/20/2020",
-        concepts: "Javascript Functions",
-        personalEntry:"So far I feel as though I have a grasp on functions based on the material we have gone over so far.",
-        mood: "excited"   
-    },
-    {
-        dateEntered: "01/20/2020",
-        concepts: "methods",
-        personalEntry:"These were really fun to work with and learn how to use to manipulate arrays that are part of Objects",
-        mood: "happy"   
-    },
-]
-
-/*
-    Purpose: To create, and return, a string template that
-    represents a single journal entry object as HTML
-
-    Arguments: journalEntry (object)
-*/
 const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     return `<section class="eachEntry offset__right">
@@ -31,18 +10,19 @@ const makeJournalEntryComponent = (journalEntry) => {
 }
 
 
-const entryContainer = document.querySelector(".entryLog")
 
-/*
-    Purpose: To render all journal entries to the DOM
-
-    Arguments: entries (array of objects)
-*/
-const renderJournalEntries = (arrayOfObjects) => {
-    for (let i = 0; i < arrayOfObjects.length; i++){
-        entryContainer.innerHTML += makeJournalEntryComponent(arrayOfObjects[i])
-    }
+const renderJournalEntries = (allEntries) => {
+    const entryContainer = document.querySelector(".entryLog"); 
+    allEntries.forEach(entry => {  
+    entryContainer.innerHTML += makeJournalEntryComponent(entry);
+    })
 }
 
-// Invoke the render function
-renderJournalEntries(journalEntries);
+const entriesUrl = "http://localhost:8088/entries"
+
+fetch(entriesUrl) // Fetch from the API
+    .then(fetchedEntries => fetchedEntries.json())  // Parse as JSON
+    .then(entries => {
+        renderJournalEntries(entries)
+    })
+    
