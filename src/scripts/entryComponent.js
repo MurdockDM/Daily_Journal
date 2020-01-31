@@ -5,3 +5,6 @@ const makeJournalEntryComponent = (journalEntry) => {
                 <article>${journalEntry.dateEntered}</article>
             </section>`
 }
+
+
+export default makeJournalEntryComponent

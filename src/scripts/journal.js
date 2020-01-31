@@ -1,3 +1,5 @@
+import API from "./data.js"
+import renderJournalEntries from "./entriesDOM.js"
 
 /*
     Main application logic that uses the functions and objects

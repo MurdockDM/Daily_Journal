@@ -10,8 +10,6 @@ const API = {
             .then(response => response.json())
     }
 }
-// fetch(entriesUrl) // Fetch from the API
-//     .then(fetchedEntries => fetchedEntries.json())  // Parse as JSON
-//     .then(entries => {
-//         renderJournalEntries(entries)
-//     })
+
+
+export default API
