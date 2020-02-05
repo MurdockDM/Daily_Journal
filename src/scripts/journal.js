@@ -9,7 +9,7 @@ import eventListenerEntryHandler from "./eventsJournal.js"
 
 localAPIManager.getJournalEntries().then(renderJournalEntries)
 eventListenerEntryHandler.submitBtnAddEventListener()
-
+eventListenerEntryHandler.radioButtonAddEventListener()
 
 
     

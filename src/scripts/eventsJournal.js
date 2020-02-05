@@ -26,7 +26,21 @@ const eventListenerEntryHandler = {
             }
             
         })
+},
+    radioButtonAddEventListener() {
+        const radioButtons = document.getElementsByName("moodFilter");
+        radioButtons.forEach(el => {el.addEventListener("click", (event) => {
+            const moodFilterSelected = document.getElementById(`${event.target.id}`).id
+            
+
+            localAPIManager.getJournalEntriesbyMood(moodFilterSelected)
+                .then(renderJournalEntries)
+           
+                
+        })
+        })
+    }
 }
-}
+
 export default eventListenerEntryHandler
 
