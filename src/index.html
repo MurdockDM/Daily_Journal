@@ -40,9 +40,39 @@
                     <option value="happy">Happy</option>
                     <option value="sad">Sad</option>
                     <option value="despair">Swimming Pool of Despair</option>
+                    <option value="curious">Curious</option>
                 </select>
                 </fieldset>
-                <input type="submit" id="journalSubmitBtn" value="Record Journal Entry" />
+                <input type="submit" id="journalSubmitBtn" value="Record Entry" />
+                
+                
+                <h3>Filter Journal Entries by Mood</h3>
+                <div role="group" id="moodEntriesFilterBox">
+                    <div>
+                      <input class="filterOptions" type="radio" name="moodFilter"
+                      id="happy">
+                      <label class="filterOptions" for="happy">Happy Entries</label>
+                    </div>
+                    <div>
+                      <input class="filterOptions" type="radio"
+                      name="moodFilter" id="sad">
+                      <label class="filterOptions" for="sad">Sad Entries</label>
+                    </div>
+                    <div>
+                      <input class="filterOptions" type="radio"
+                      name="moodFilter" id="despair">
+                      <label class="filterOptions" for="despair">Swimming Pool of Despair Entries</label>
+                    </div>
+                    <div>
+                      <input class="filterOptions" type="radio"
+                      name="moodFilter" id="curious">
+                      <label class="filterOptions" for="curious">Curious Entries</label>
+                    </div>       
+                  <!-- <label class="filterOptions" for="allFilter">All Entries</label>
+                  <input class="filterOptions" type="radio" name="moodFilter"
+                  id="allFilter" checked> -->
+                  </div>
+                
             </form>
             <article class="entryLog">
             </article>

@@ -27,6 +27,13 @@
       "personalEntry": "I liked these but need to work on them more.",
       "mood": "happy",
       "id": 4
+    },
+    {
+      "dateEntered": "2020-02-01",
+      "concepts": "Array Methods",
+      "personalEntry": "These will be interesting to figure out.",
+      "mood": "curious",
+      "id": 5
     }
   ]
 }
