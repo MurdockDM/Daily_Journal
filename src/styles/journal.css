@@ -1,16 +1,17 @@
 html {
     background-color: hsl(212, 33%, 89%);
     font-family: 'Roboto', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80);
 }
 
 body {
-    background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80);
+    
     background-position: center;
     background-size: auto;
 }
 header {
     display: block;
-    background-color: hsl(210, 32%, 72%);
+    background-color: hsl(210, 32%, 72%, 50%);
     text-align: center ;
     
 }
