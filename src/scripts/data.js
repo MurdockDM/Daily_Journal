@@ -1,15 +1,24 @@
-// This file fetches the data from the JSON database file entries.json
 
 
-const entriesUrl = "http://localhost:8088/entries"
 
-
-const API = {
-    getJournalEntries () {
-        return fetch(entriesUrl)
+const localAPIManager = {
+    getJournalEntries() {
+        const baseURL = "http://localhost:8088"
+        return fetch(`${baseURL}/entries`)
             .then(response => response.json())
-    }
+        },
+    saveJournalEntry(newJournalEntry) {
+        return fetch("http://localhost:8088/entries", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newJournalEntry)
+        });
+    },
+    
 }
 
 
-export default API
+
+export default localAPIManager
