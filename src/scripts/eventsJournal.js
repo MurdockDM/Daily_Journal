@@ -26,7 +26,7 @@ const eventListenerEntryHandler = {
             }
             
         })
-},
+    },
     radioButtonAddEventListener() {
         const radioButtons = document.getElementsByName("moodFilter");
         radioButtons.forEach(el => {el.addEventListener("click", (event) => {
@@ -38,6 +38,18 @@ const eventListenerEntryHandler = {
            
                 
         })
+        })
+    },
+    deleteButtonAddEventListener() {
+        const entryContainer = document.querySelector(".entryLog")
+        entryContainer.addEventListener("click", () => {
+            if (event.target.id.startsWith("deleteEntry-")) {
+                const entryToDelete = event.target.id.split("-")[1]
+
+                localAPIManager.deleteJournalEntry(entryToDelete)
+                    .then(localAPIManager.getJournalEntries)
+                    .then(renderJournalEntries)
+            }
         })
     }
 }
