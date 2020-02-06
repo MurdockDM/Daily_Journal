@@ -1,104 +1,95 @@
 html {
-    background-color: hsl(212, 33%, 89%);
-    font-family: 'Roboto', sans-serif;
-    background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80);
+  background-color: hsl(212, 33%, 89%);
+  font-family: "Roboto", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80);
 }
 
 body {
-    
-    background-position: center;
-    background-size: auto;
+  background-position: center;
+  background-size: auto;
 }
 header {
-    display: block;
-    background-color: hsl(210, 32%, 72%, 50%);
-    text-align: center ;
-    
+  display: block;
+  background-color: hsl(210, 32%, 72%, 50%);
+  text-align: center;
 }
 
 header > h1 {
-    color: hsl(170, 97%, 15%);
-    
-    font-weight: bold;
+  color: hsl(170, 97%, 15%);
 
+  font-weight: bold;
 }
 
 .inset__border {
-    border: inset;
+  border: inset;
 }
-
 
 #moodEntriesFilterBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    background-color:hsl(160, 51%, 49%, 38%);
-    height: 10ch;
-    border: 0.5px black inset;
-    
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  background-color: hsl(160, 51%, 49%, 38%);
+  height: 10ch;
+  border: 0.5px black inset;
 }
 
-#moodEntriesFilterBox>div {
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    
-    
-    
-   
+#moodEntriesFilterBox > div {
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
 }
 
 fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color:hsl(160, 51%, 49%, 38%) ;
-    
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: hsl(160, 51%, 49%, 38%);
 }
 
-
-
-
 input[type="submit"] {
-    background-color: hsl(205, 97%, 85%);
-    font-size: 16px;
-    margin: 1rem 0 0 1rem;
-    border-radius: 12px;
-    text-shadow: 1px 1px hsl(209, 23%, 60%)
+  background-color: hsl(205, 97%, 85%);
+  font-size: 16px;
+  margin: 1rem 0 0 1rem;
+  border-radius: 12px;
+  text-shadow: 1px 1px hsl(209, 23%, 60%);
 }
 
 input[type="submit"]:hover {
-    background-color: hsl(199, 84%, 55%);
-    font-size: 16px;
-    margin: 1rem 0 0 1rem;
-    border-radius: 12px;
-    text-shadow: 1px 1px hsl(209, 23%, 60%)
+  background-color: hsl(199, 84%, 55%);
+  font-size: 16px;
+  margin: 1rem 0 0 1rem;
+  border-radius: 12px;
+  text-shadow: 1px 1px hsl(209, 23%, 60%);
 }
 
-
-input[type=text]:focus, input[type=date]:focus{ 
-	border:2px solid #000; 
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border: 2px solid #000;
 }
 
 select:focus {
-    border:2px solid #000;
+  border: 2px solid #000;
 }
 
 textarea:focus {
-    border:2px solid #000;
+  border: 2px solid #000;
 }
 
-
 .font__bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .large__font {
-    font-size: 2ch;
+  font-size: 2ch;
 }
 
 .offset__right {
-    margin-left: 1rem;
+  margin-left: 1rem;
+}
+
+#button__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
