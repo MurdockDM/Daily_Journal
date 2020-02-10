@@ -1,5 +1,5 @@
 
-
+const baseURL = "http://localhost:8088"
 
 const localAPIManager = {
     getJournalEntries() {
@@ -30,6 +30,15 @@ const localAPIManager = {
     pullJournalEntryForEdits(journalID) {
         return fetch(`http://localhost:8088/entries/${journalID}`)
             .then(response => response.json())
+    },
+    updateJournalEntry(journalEntryChange) {
+        return fetch(`${baseURL}/entries/${journalEntryChange.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(journalEntryChange)
+        });
     }
 }
 
