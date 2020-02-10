@@ -1,22 +1,22 @@
 {
   "entries": [
     {
-      "id": 1,
-      "dateEntered": "01/20/2020",
+      "dateEntered": "2020-01-03",
       "concepts": "Javascript Functions",
-      "personalEntry": "So far I feel as though I have a grasp on functions based on the material we have gone over so far.",
-      "mood": "happy"
+      "personalEntry": "So far I feel as though I have a grasp on functions based on the material we have gone over so far. I really like this stuff.",
+      "mood": "happy",
+      "id": 1
     },
     {
       "id": 2,
-      "dateEntered": "01/20/2020",
+      "dateEntered": "2020-01-20",
       "concepts": "methods",
       "personalEntry": "These were really fun to work with and learn how to use to manipulate arrays that are part of Objects",
       "mood": "happy"
     },
     {
       "id": 3,
-      "dateEntered": "01/23/2020",
+      "dateEntered": "2020-01-26",
       "concepts": "DOM manipulation",
       "personalEntry": "This feels like a big step. I grasp the concepts but need more practice",
       "mood": "happy"
@@ -27,6 +27,13 @@
       "personalEntry": "I liked these but need to work on them more.",
       "mood": "happy",
       "id": 4
+    },
+    {
+      "dateEntered": "2020-02-06",
+      "concepts": "Edit Fetch Methods",
+      "personalEntry": "This is the most challenging overall concept so far. However I seem to understand it so far.",
+      "mood": "curious",
+      "id": 5
     }
   ]
 }

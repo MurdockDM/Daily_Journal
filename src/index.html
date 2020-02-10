@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Daily Journal</title>
     <link rel="stylesheet" href="styles/journal.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">  
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -14,69 +17,95 @@
     </header>
 
     <article>
-        <section>
-            <form action="">
-                <fieldset>
-                <label for="journalDate">Date of entry</label>
-                <input type="date" name="journalDate" id="journalDate" class="inset__border" />
-                </fieldset>
-                <fieldset>
-                <label for="conceptsCovered">Concepts Covered</label>
-                <input type="text" name="conceptsCovered" id="conceptsCovered" class="inset__border" />
-                </fieldset>
-                <fieldset>
-                <label for="journalEntry">Journal Entry</label>
-                <textarea
-                    name="journalEntry"
-                    id="journalEntry"
-                    cols="30"
-                    rows="3"
-                    class="inset__border"
-                ></textarea>
-                </fieldset>
-                <fieldset>
-                <label for="moodChoice">Mood for the day</label>
-                <select name="moodChoice" id="moodChoice" class="inset__border">
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="despair">Swimming Pool of Despair</option>
-                    <option value="curious">Curious</option>
-                </select>
-                </fieldset>
-                <input type="submit" id="journalSubmitBtn" value="Record Entry" />
-                
-                
-                <h3>Filter Journal Entries by Mood</h3>
-                <div role="group" id="moodEntriesFilterBox">
-                    <div>
-                      <input class="filterOptions" type="radio" name="moodFilter"
-                      id="happy">
-                      <label class="filterOptions" for="happy">Happy Entries</label>
-                    </div>
-                    <div>
-                      <input class="filterOptions" type="radio"
-                      name="moodFilter" id="sad">
-                      <label class="filterOptions" for="sad">Sad Entries</label>
-                    </div>
-                    <div>
-                      <input class="filterOptions" type="radio"
-                      name="moodFilter" id="despair">
-                      <label class="filterOptions" for="despair">Swimming Pool of Despair Entries</label>
-                    </div>
-                    <div>
-                      <input class="filterOptions" type="radio"
-                      name="moodFilter" id="curious">
-                      <label class="filterOptions" for="curious">Curious Entries</label>
-                    </div>       
-                  </div>
-                
-            </form>
-            <article class="entryLog">
-            </article>
-        </section>    
+      <section>
+        <form action="">
+          <h3>Edit and Save Journal Entries</h3>
+          <input type="hidden" id="hiddenJournalEntryId" value="" />
+          <fieldset>
+            <label for="journalDate">Date of entry</label>
+            <input
+              type="date"
+              name="journalDate"
+              id="journalDate"
+              class="inset__border"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="conceptsCovered">Concepts Covered</label>
+            <input
+              type="text"
+              name="conceptsCovered"
+              id="conceptsCovered"
+              class="inset__border"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <textarea
+              name="journalEntry"
+              id="journalEntry"
+              cols="30"
+              rows="3"
+              class="inset__border"
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <label for="moodChoice">Mood for the day</label>
+            <select name="moodChoice" id="moodChoice" class="inset__border">
+              <option value="happy">Happy</option>
+              <option value="sad">Sad</option>
+              <option value="despair">Swimming Pool of Despair</option>
+              <option value="curious">Curious</option>
+            </select>
+          </fieldset>
+          <input type="submit" id="journalSubmitBtn" value="Save Entry" />
+
+          <h3>Filter Journal Entries by Mood</h3>
+          <div role="group" id="moodEntriesFilterBox">
+            <div>
+              <input
+                class="filterOptions"
+                type="radio"
+                name="moodFilter"
+                id="happy"
+              />
+              <label class="filterOptions" for="happy">Happy Entries</label>
+            </div>
+            <div>
+              <input
+                class="filterOptions"
+                type="radio"
+                name="moodFilter"
+                id="sad"
+              />
+              <label class="filterOptions" for="sad">Sad Entries</label>
+            </div>
+            <div>
+              <input
+                class="filterOptions"
+                type="radio"
+                name="moodFilter"
+                id="despair"
+              />
+              <label class="filterOptions" for="despair"
+                >Swimming Pool of Despair Entries</label
+              >
+            </div>
+            <div>
+              <input
+                class="filterOptions"
+                type="radio"
+                name="moodFilter"
+                id="curious"
+              />
+              <label class="filterOptions" for="curious">Curious Entries</label>
+            </div>
+          </div>
+        </form>
+
+        <article class="entryLog"></article>
+      </section>
     </article>
     <script type="module" src="scripts/journal.js"></script>
-    
   </body>
-  
 </html>
