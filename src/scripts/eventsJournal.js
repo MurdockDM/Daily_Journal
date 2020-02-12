@@ -1,5 +1,6 @@
 import localAPIManager from "./data.js"
 import renderJournalEntries from "./entriesDOM.js";
+import makeJournalEntryComponent from "./entryComponent.js";
 
 
 const updateJournalFields = journalEntryID => {
@@ -53,6 +54,7 @@ const eventListenerEntryHandler = {
             const journalEntryConcepts = document.body.querySelector("#conceptsCovered").value;
             const journalEntryText = document.body.querySelector("#journalEntry").value;
             const journalEntryMoodChoice = document.body.querySelector("#moodChoice").value
+            const searchInputFormValue = document.querySelector("#searchEntries").value
 
             const journalEntryChange = {
                 dateEntered: journalEntryDate,
@@ -71,7 +73,7 @@ const eventListenerEntryHandler = {
                             .then(renderJournalEntries)
                             .then(emptyFormFields)
                     })
-            } else {
+            } else if (searchInputFormValue =="") {
                 localAPIManager.saveJournalEntry(journalEntryChange)
                     .then(() => {
                         localAPIManager.getJournalEntries(renderJournalEntries)
@@ -107,6 +109,28 @@ const eventListenerEntryHandler = {
                 updateJournalFields(entryToEdit);
             }
         })
+    },
+    searchFunctionEnterAddEventListener () {
+       const HTMLBody = document.querySelector("#searchBoxContainer")
+       const searchInputFormValue = document.querySelector("#searchEntries")
+       const entryContainer = document.querySelector(".entryLog")
+       HTMLBody.addEventListener('keydown', (event) => {
+            if (event.keyCode == 13) {
+                const searchInfo = searchInputFormValue.value.toLowerCase()
+                entryContainer.innerHTML = ""
+                const journalEntriesPromise = localAPIManager.getJournalEntries()
+                journalEntriesPromise.then(object => {
+                    object.forEach(journalEntry => {
+                        for (const entryValue of Object.values(journalEntry)) {
+                            const searchedEntryComponent = makeJournalEntryComponent(journalEntry)
+                            let valueString = JSON.stringify(entryValue).toLowerCase()
+                            if (valueString.includes(`${searchInfo}`))
+                                return entryContainer.innerHTML += searchedEntryComponent;
+                        }
+                    })
+                })
+            }
+        });
     }
 }
 

@@ -18,7 +18,7 @@
 
     <article>
       <section>
-        <form action="">
+        <div>
           <h3>Edit and Save Journal Entries</h3>
           <input type="hidden" id="hiddenJournalEntryId" value="" />
           <fieldset>
@@ -58,50 +58,65 @@
               <option value="curious">Curious</option>
             </select>
           </fieldset>
-          <input type="submit" id="journalSubmitBtn" value="Save Entry" />
+          <input type="button" id="journalSubmitBtn" value="Save Entry" />
+          
+          
+          <h3>Filter Journal Entries by Mood</h3> 
+          <div id="search_filter_box">
+            <div class="filter_search" role="group" id="moodEntriesFilterBox">
+              <div>
+                <input
+                  class="filterOptions"
+                  type="radio"
+                  name="moodFilter"
+                  id="happy"
+                />
+                <label class="filterOptions" for="happy">Happy Entries</label>
+              </div>
+              <div>
+                <input
+                  class="filterOptions"
+                  type="radio"
+                  name="moodFilter"
+                  id="sad"
+                />
+                <label class="filterOptions" for="sad">Sad Entries</label>
+              </div>
+              <div>
+                <input
+                  class="filterOptions"
+                  type="radio"
+                  name="moodFilter"
+                  id="despair"
+                />
+                <label class="filterOptions" for="despair"
+                  >Swimming Pool of Despair Entries</label
+                >
+              </div>
+              <div>
+                <input
+                  class="filterOptions"
+                  type="radio"
+                  name="moodFilter"
+                  id="curious"
+                />
+                <label class="filterOptions" for="curious"
+                  >Curious Entries</label
+                >
+              </div>
+            </div>
+            
+            <div class="search" id="searchBoxContainer">
+              <label for="searchEntries" id="searchLabel">Search the journal entries:</label>
+              <input
+                type="search"
+                id="searchEntries"
+                name="searchEntries"
+                aria-label="Search through site content"
+              />
+            </div>
 
-          <h3>Filter Journal Entries by Mood</h3>
-          <div role="group" id="moodEntriesFilterBox">
-            <div>
-              <input
-                class="filterOptions"
-                type="radio"
-                name="moodFilter"
-                id="happy"
-              />
-              <label class="filterOptions" for="happy">Happy Entries</label>
-            </div>
-            <div>
-              <input
-                class="filterOptions"
-                type="radio"
-                name="moodFilter"
-                id="sad"
-              />
-              <label class="filterOptions" for="sad">Sad Entries</label>
-            </div>
-            <div>
-              <input
-                class="filterOptions"
-                type="radio"
-                name="moodFilter"
-                id="despair"
-              />
-              <label class="filterOptions" for="despair"
-                >Swimming Pool of Despair Entries</label
-              >
-            </div>
-            <div>
-              <input
-                class="filterOptions"
-                type="radio"
-                name="moodFilter"
-                id="curious"
-              />
-              <label class="filterOptions" for="curious">Curious Entries</label>
-            </div>
           </div>
-        </form>
 
         <article class="entryLog"></article>
       </section>
