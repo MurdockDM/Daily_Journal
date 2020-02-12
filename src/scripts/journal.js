@@ -11,4 +11,5 @@ localAPIManager.getJournalEntries().then(renderJournalEntries)
 eventListenerEntryHandler.submitBtnAddEventListener()
 eventListenerEntryHandler.radioButtonAddEventListener()
 eventListenerEntryHandler.journalEntryButtonsAddEventListener()
+eventListenerEntryHandler.searchFunctionEnterAddEventListener()
 
